@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PURTASIA</title>
+<style>
+    *{  margin: 0;
+        padding: 0;
+        box-sizing: border-box;}  
+    :root {
+        --ana-arka-plan:#f4f4f9;
+        --koyu-renk:#232946;
+        --vurgu-rengi:#232946;
+        --beyaz:#ffffff;
+    }    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--ana-arka-plan);
+        color: var(--koyu-renk);
+        line-height: 1.6;
+    }
+    .üst-panel, .içerik-alanı, .alt-bilgi {
+        width: 90%;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .kart {
+        background-color: var(--beyaz);
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        border-left: 5px solid var(--vurgu-rengi);
+    }
+    h1, h2 {
+        margin-bottom: 15px;
+        color: var(--koyu-renk);
+    }
+    .navigasyon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .linkler {
+        display: flex;
+        list-style: none; 
+        gap: 20px;
+}
+.linkler a {
+        text-decoration: none;
+        color: var(--koyu-renk);
+        font-weight: 500;
+        transition: 0.3s;
+}
+.linkler a:hover {
+        color: var(--vurgu-rengi);
+}
+.logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+    .navigasyon {
+        flex-direction: column; 
+        gap: 15px;             
+    }
+
+    .linkler {
+        gap: 10px;             
+    }
+
+    .üst-panel {
+        text-align: center;     
+    }
+}
+.profil-resmi {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid var(--vurgu-rengi);
+    margin-bottom: 20px;
+    display: block; 
+}
+
+
+.kart {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+.kart {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.kart:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.proje-izgarasi {
+    display: grid;
+    /* Otomatik sığdır: Kutular en az 250px olsun, sığmazsa alt satıra geç */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.proje-kart {
+    background-color: var(--beyaz);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-bottom: 4px solid var(--vurgu-rengi);
+    transition: 0.3s;
+}
+
+.proje-kart:hover {
+    background-color: var(--vurgu-rengi);
+    color: white; 
+}
+</style>
+</head>
+<body>
+    <header class="üst-panel">
+        <h1>Purtasia Portfolio</h1>
+<nav class="navigasyon">
+    <div class="logo">PURTASIA</div> <ul class="linkler"> <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Projeler</a></li>
+        <li><a href="#">İletişim</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <main class="icerik-alanı">
+    <section class="kart">
+        <h2 style="text-align:center; margin-top:40px;">Projelerim</h2>
+<section class="proje-izgarasi">
+    <div class="proje-kart">Proje 1</div>
+    <div class="proje-kart">Proje 2</div>
+    <div class="proje-kart">Proje 3</div>
+    <div class="proje-kart">Proje 4</div>
+</section>
+    <img src="https://via.placeholder.com/150" alt="Profil Resmi" class="profil-resmi">
+    <h2>Ben Kimim?</h2>
+    <p>Geleceğin Frontend Developer adayıyım. Modern CSS öğreniyorum.</p>
+</section>  
+    </main>
+
+    <footer class="alt-bilgi">
+            <p>&copy; 2026 Purtasia - Tüm Hakları Saklıdır.</p>
+    </footer>
+</body>
+</html>
